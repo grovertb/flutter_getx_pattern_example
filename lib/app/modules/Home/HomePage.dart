@@ -9,7 +9,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
       builder: (_) => Scaffold(
-        body: Center(),
+        body: Center(
+          child: Text("HomePage"),
+        ),
       ),
     );
   }

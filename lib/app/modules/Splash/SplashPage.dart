@@ -10,12 +10,7 @@ class SplashPage extends StatelessWidget {
     return GetBuilder<SplashController>(
       builder: (_) => Scaffold(
         body: Center(
-          child: TextButton(
-            onPressed: () {
-              _.printMessage();
-            },
-            child: Text("Print Message"),
-          ),
+          child: CircularProgressIndicator(),
         ),
       ),
     );

@@ -5,15 +5,15 @@ import 'package:get/get.dart';
 
 class DependencyInjection {
   static void init() {
-    Get.lazyPut(
+    Get.lazyPut<Dio>(
       () => Dio(
         BaseOptions(baseUrl: "https://api.themoviedb.org/3"),
       ),
     );
-    Get.lazyPut(
+    Get.lazyPut<AuthenticationAPI>(
       () => AuthenticationAPI(),
     );
-    Get.lazyPut(
+    Get.lazyPut<AuthenticationRepository>(
       () => AuthenticationRepository(),
     );
   }

@@ -1,12 +1,7 @@
-import 'package:flutter_pattern_example/app/data/models/request_token.dart';
-import 'package:flutter_pattern_example/app/data/repositories/authentication_repository.dart';
 import 'package:flutter_pattern_example/app/routes/routes.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
-  final AuthenticationRepository _repository =
-      Get.find<AuthenticationRepository>();
-
   // SplashController(this._repository);
 
   @override
@@ -17,13 +12,13 @@ class SplashController extends GetxController {
 
   _init() async {
     try {
-      RequestToken requestToken = await _repository.newRequestToken();
-      print("==== requestToken ====");
-      print(requestToken.requestToken);
-      print(requestToken.expiresAt);
-      print(requestToken.success);
+      // RequestToken requestToken = await _repository.newRequestToken();
+      await Future.delayed(Duration(seconds: 2));
 
-      Get.offNamed(Routes.HOME);
+      Get.offNamed(
+        Routes.HOME,
+        // arguments: requestToken.requestToken,
+      );
     } catch (e) {
       print(e);
     }

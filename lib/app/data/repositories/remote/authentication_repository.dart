@@ -1,5 +1,5 @@
 import 'package:flutter_pattern_example/app/data/models/request_token.dart';
-import 'package:flutter_pattern_example/app/data/providers/authentication_api.dart';
+import 'package:flutter_pattern_example/app/data/providers/remote/authentication_api.dart';
 import 'package:get/get.dart';
 import 'package:meta/meta.dart' show required;
 
